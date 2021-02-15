@@ -20,21 +20,52 @@
   <style>
     body {
       margin: 0;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    img {
-      box-sizing: border-box;
-      padding: 1rem;
+    svg {
       width: 100%;
+      display: block;
+      visibility: visible;
+    }
+    svg#small {
+      max-width: 375px;
+    }
+    svg#large {
+      display: none;
+      visibility: hidden;
       max-width: 1200px;
+    }
+    @media only screen and (min-width: 767px) {
+      svg#small {
+        display: none;
+        visibility: hidden;
+      }
+      svg#large {
+        display: block;
+        visibility: visible;
+      }
     }
   </style>
 </head>
 <body>
   <div>
-    <img src="/uazo.png" />
+    <svg id="small" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="812" viewBox="0 0 375 812">
+      <image width="375" height="812" xlink:href="/small.png"></image> <a xlink:href="mailto:info@uazo.in">
+        <rect x="27" y="666" fill="#fff" opacity="0" width="180" height="36"></rect>
+      </a><a xlink:href="tel:8178812892">
+        <rect x="25" y="710" fill="#fff" opacity="0" width="220" height="30"></rect>
+      </a>
+    </svg>
+    <svg id="large" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="765" viewBox="0 0 1920 1080">
+      <image width="1920" height="1080" xlink:href="/large.png"></image> <a xlink:href="mailto:info@uazo.in">
+        <rect x="1386" y="807" fill="#fff" opacity="0" width="350" height="58"></rect>
+      </a><a xlink:href="tel:8178812892">
+        <rect x="1386" y="873" fill="#fff" opacity="0" width="429" height="50"></rect>
+      </a>
+    </svg>
   </div>
 </body>
 </html>
